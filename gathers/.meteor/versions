@@ -1,3 +1,7 @@
+accounts-base@1.2.7
+accounts-oauth@1.1.12
+accounts-ui@1.1.9
+accounts-ui-unstyled@1.1.12
 allow-deny@1.0.4
 autopublish@1.0.7
 autoupdate@1.2.9
@@ -16,6 +20,7 @@ check@1.2.1
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
+ddp-rate-limiter@1.0.4
 ddp-server@1.2.6
 deps@1.0.12
 diff-sequence@1.0.5
@@ -33,7 +38,9 @@ id-map@1.0.7
 insecure@1.0.7
 jquery@1.11.8
 launch-screen@1.0.11
+less@2.6.0
 livedata@1.0.18
+localstorage@1.0.9
 logging@1.0.12
 meteor@1.1.14
 meteor-base@1.0.4
@@ -47,15 +54,26 @@ modules-runtime@0.6.3
 mongo@1.1.7
 mongo-id@1.0.4
 npm-mongo@1.4.43
+oauth@1.1.10
+oauth2@1.1.9
 observe-sequence@1.0.11
 ordered-dict@1.0.7
 promise@0.6.7
 random@1.0.9
+<<<<<<< HEAD
+rate-limit@1.0.4
+reactive-dict@1.1.7
+=======
 react-meteor-data@0.2.9
+>>>>>>> 76273a498c1e395d000c77f04a8700446ab688c3
 reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
 routepolicy@1.0.10
+scholtzm:accounts-steam@1.1.1
+scholtzm:steam@1.1.0
+service-configuration@1.0.9
+session@1.1.5
 spacebars@1.0.11
 spacebars-compiler@1.0.11
 standard-minifier-css@1.0.6
