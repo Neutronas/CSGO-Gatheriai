@@ -60,8 +60,12 @@ observe-sequence@1.0.11
 ordered-dict@1.0.7
 promise@0.6.7
 random@1.0.9
+<<<<<<< HEAD
 rate-limit@1.0.4
 reactive-dict@1.1.7
+=======
+react-meteor-data@0.2.9
+>>>>>>> 76273a498c1e395d000c77f04a8700446ab688c3
 reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
@@ -76,6 +80,7 @@ standard-minifier-css@1.0.6
 standard-minifier-js@1.0.6
 templating@1.1.9
 templating-tools@1.0.4
+tmeasday:check-npm-versions@0.2.0
 tracker@1.0.13
 ui@1.0.11
 underscore@1.0.8
