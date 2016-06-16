@@ -1,4 +1,5 @@
 accounts-base@1.2.7
+accounts-oauth@1.1.12
 accounts-password@1.1.8
 accounts-ui@1.1.9
 accounts-ui-unstyled@1.1.12
@@ -56,6 +57,8 @@ mongo@1.1.7
 mongo-id@1.0.4
 npm-bcrypt@0.8.6_1
 npm-mongo@1.4.43
+oauth@1.1.10
+oauth2@1.1.9
 observe-sequence@1.0.11
 ordered-dict@1.0.7
 promise@0.6.7
@@ -67,6 +70,8 @@ reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
 routepolicy@1.0.10
+scholtzm:accounts-steam@1.1.1
+scholtzm:steam@1.1.0
 service-configuration@1.0.9
 session@1.1.5
 sha@1.0.7

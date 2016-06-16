@@ -47,6 +47,12 @@ class App extends Component {
         <Task key={task._id} task={task} />
       ));
   }
+
+  loginWithSteam() {
+      console.log("STEAM");
+      Meteor.loginWithSteam();
+      console.log("Nesuveikia");
+  }
  
   render() {
     return (
@@ -63,6 +69,7 @@ class App extends Component {
             Hide Completed Tasks
           </label>
 
+          <button onClick = {this.loginWithSteam.bind(this)} />
           <AccountsUIWrapper />
 
           { this.props.currentUser ?
