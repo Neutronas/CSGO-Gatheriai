@@ -11,13 +11,10 @@ import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 class App extends Component {
 
     componentDidUpdate(){
-      if(Meteor.userId()){
-        var steamAPI = ' http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=BC48645A4E6E32C76BB4012F958EF147&steamids=76561197960435530';
-        if(Meteor.userId()){
-          Meteor.http.get(steamAPI, function (err, res) {
-            console.log(res.statusCode, res.data);
+      if (Meteor.isClient) {
+            Meteor.call("checkSteam", Meteor.user().profile.id,  function(error, results) {
+                console.log(results.content); //results.data should be a JSON object
           });
-        }
       }
     }
     componentDidMount(){
@@ -28,8 +25,10 @@ class App extends Component {
         <div className="container">
           <header>
 
-            <AccountsUIWrapper />
+          <AccountsUIWrapper />
+
           </header>
+
           <ChatWrapper tasks={this.props.tasks} commentCount={this.props.commentCount} currentUser={this.props.currentUser} />
         </div>
       );

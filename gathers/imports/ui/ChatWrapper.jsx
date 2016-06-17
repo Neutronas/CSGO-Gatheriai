@@ -5,13 +5,6 @@ import { Meteor } from 'meteor/meteor';
 import { Tasks } from '../api/tasks.js';
 import Task from './Task.jsx';
 export default class ChatWrapper extends Component {
-    
-    constructor() {
-        super();
-        this.state = {
-          hideCompleted: false,
-        };
-    }
 
     handleSubmit(event) {
       event.preventDefault();
