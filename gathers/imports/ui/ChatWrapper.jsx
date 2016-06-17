@@ -30,7 +30,7 @@ export default class ChatWrapper extends Component {
       ReactDOM.findDOMNode(this.refs.textInput).value = '';
     }
 
-    renderTasks() { //nlb suprantu, kaip veikia? :D
+    renderTasks() {
         let commentTasks = this.props.tasks;
         return commentTasks.map((task) => (
           <Task key={task._id} task={task} />
