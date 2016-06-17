@@ -30,7 +30,7 @@ class App extends Component {
 
             <AccountsUIWrapper />
           </header>
-          <ChatWrapper tasks={this.props.tasks} incompleteCount={this.props.incompleteCount} currentUser={this.props.currentUser} />
+          <ChatWrapper tasks={this.props.tasks} commentCount={this.props.commentCount} currentUser={this.props.currentUser} />
         </div>
       );
     }
@@ -38,13 +38,13 @@ class App extends Component {
 
 App.propTypes = {
   tasks: PropTypes.array.isRequired,
-  incompleteCount: PropTypes.number.isRequired,
+  commentCount: PropTypes.number.isRequired,
 };
  
 export default createContainer(() => {
   return {
     tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
-    incompleteCount: Tasks.find({ checked: { $ne: true } }).count(),
+    commentCount: Tasks.find().count(),
     currentUser: Meteor.user(),
   };
 }, App);
