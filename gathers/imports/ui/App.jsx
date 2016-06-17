@@ -5,26 +5,17 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/tasks.js';
 
+import HeaderComponent from './HeaderComponent.jsx'; 
 import ChatWrapper from './ChatWrapper.jsx'; 
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 // App component - represents the whole app
 class App extends Component {
 
-    componentDidUpdate(){
-      if (Meteor.isClient) {
-            Meteor.call("checkSteam", Meteor.user().profile.id,  function(error, results) {
-                console.log(results.content); //results.data should be a JSON object
-          });
-      }
-    }
-    componentDidMount(){
-      console.log(this.props.currentUser);
-    }
     render() {
       return (
         <div className="container">
           <header>
-
+          <HeaderComponent />
           <AccountsUIWrapper />
 
           </header>

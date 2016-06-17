@@ -20,8 +20,14 @@ if(Meteor.isServer) {
 }
 
 
-Accounts.onLogin(function(steamID){
-  console.log(steamID)
+Accounts.onLogin(function(user){
+    let avatar, miniAvatar, username;
+    Meteor.call("checkSteam", Meteor.user().profile.id,  function(error, results) {
+      avatar = results.data.response.players[0].avatarfull;
+      miniAvatar = results.data.response.players[0].avatar;
+      username = results.data.response.players[0].personaname;
+    });
+    Meteor.users.update({_id:Meteor.userId()}, { $set: {avatar:avatar, miniavatar:miniAvatar, username:username} });
 });
 
 Meteor.startup(() => {
