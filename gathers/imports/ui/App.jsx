@@ -10,8 +10,9 @@ import ChatWrapper from './ChatWrapper.jsx';
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 // App component - represents the whole app
 class App extends Component {
-
+   
     render() {
+     
       return (
         <div className="container">
           <header>
